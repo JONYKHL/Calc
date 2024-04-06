@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+<script>
+
+//alert(arr); // 1,2,3
+//alert(arr[1]); // 2
+//arr.push(10);
+//alert(arr); // 1,2,3,10
+//alert(arr.pop()); // 10
+//alert(arr); // 1,2,3
+
+var arr = [];
+//var red = -1;
+//var black = 1;
+var red = 0;
+var black = 0;
+var zero = 0;
+var i = 0;
+var counter = 0;
+var PlusOrMinus;
+var roundRed = 0;
+var roundBlack = 0;
+var max_length = 0;
+
+alert("Вот весь массив изначально: " + arr);
+
+for (i = 0; i <= 1000000; i++) {
+	
+	PlusOrMinus = Math.random()*36 < 0.5 ? -1 : 1;
+	
+		
+	if (PlusOrMinus == 1) {
+		black = ++black;
+	}
+	else {
+		red = ++red;
+	}
+	
+	arr.push(PlusOrMinus);
+}
+
+alert("Вот весь получившийся массив: " + arr);
+alert("Вот количество red: " + red);
+alert("Вот количество black: " + black);
+
+for (i = 0; i < arr.length; i++) {
+	if (arr[i] == -1) {
+		lenght = 0;
+		while(i < arr.lenght && arr[i] == -1) {
+			i++;
+			lenght++;
+		}
+		
+		if (lenght > max_length) {
+			max_length = lenght;
+		}
+		
+	}
+}
+
+alert("Самая длинная последовательность red: " + max_length);
+
+//while (arr.length);
+
+//for(i = 0; i <= rounds; i++) {
+//	arr.push(Math.round(Math.random()*36));
+//	}
+
+//alert(arr);
+
+//for(i = 0; i < arr.length; i++) {
+//	if (arr[i] == -1) {
+//	red++;
+//	}
+//	else
+//}
+
+//alert("Красное выпало" + red + "раз" + ", а черное - " +  + " раз");
+
+</script>
